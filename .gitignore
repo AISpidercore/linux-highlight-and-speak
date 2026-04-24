@@ -1,0 +1,14 @@
+# Ignore voice models
+voice_models/
+
+# Ignore temporary audio files
+*.wav
+*.mp3
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore other unnecessary files
+.DS_Store
+*.log
