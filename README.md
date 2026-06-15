@@ -7,15 +7,16 @@
 
 ## Overview
 
-Linux Highlight and Speak is an innovative accessibility tool designed to enhance usability by converting highlighted text into speech. Simply select any text on your Linux system, and the tool will read it to you aloud. Fully offline and privacy-focused.
+Linux Highlight and Speak is an innovative accessibility tool designed to convert any highlighted text into natural-sounding speech. Simply select, copy, and listen. Fully offline and privacy-focused.
 
 ## Features
 
 - 🔊 Convert highlighted text to speech instantly
-- 💬 Support for multiple text-to-speech engines (espeak, etc.)
+- 💬 Support for multiple voices and languages (via espeak)
 - 🖥️ Both CLI and GUI interfaces available
 - 🔒 Completely offline - no cloud dependencies
 - ♿ Enhanced accessibility for users with visual impairments
+- 📋 Works with any text editor, web browser, or document
 - ⚡ Lightweight and responsive
 
 ## Quick Start
@@ -28,37 +29,52 @@ git clone https://github.com/AISpidercore/linux-highlight-and-speak.git
 cd linux-highlight-and-speak
 ```
 
-### 2. Install Dependencies
+### 2. Automated Setup (Recommended)
 
-Ensure you have the required dependencies installed:
-
+Run the setup script:
 ```bash
-sudo apt install espeak xclip
+bash setup.sh
 ```
 
-### 3. Basic Usage (CLI)
+This will install all dependencies and create convenient shortcuts.
 
-To highlight text and convert it to speech:
+### 3. Manual Setup (Alternative)
 
+Install dependencies:
 ```bash
-./highlight_and_speak.sh
+# Ubuntu/Debian
+sudo apt install espeak xclip zenity
+
+# Fedora
+sudo dnf install espeak xclip zenity
+
+# Arch
+sudo pacman -S espeak xclip zenity
 ```
 
-Simply select the text you want to hear, and the tool will read it to you.
-
-### 4. GUI Usage
-
-For a graphical interface experience:
-
+Make scripts executable:
 ```bash
-./highlight_and_speak_gui.sh
+chmod +x highlight_and_speak.sh highlight_and_speak_gui.sh
+```
+
+### 4. Usage
+
+**CLI Version** (Command Line):
+```bash
+# Highlight text, copy it (Ctrl+C), then run:
+highlight-and-speak
+```
+
+**GUI Version** (Graphical Interface):
+```bash
+highlight-and-speak-gui
 ```
 
 ## Documentation
 
-For more detailed information, please visit:
-- [User Guide](docs/user-guide.md) - Complete feature documentation
-- [Installation Instructions](docs/installation.md) - Detailed setup guide
+For detailed information, please visit:
+- [Installation Guide](docs/installation.md) - Complete setup instructions
+- [User Guide](docs/user-guide.md) - How to use the tool
 - [FAQ](docs/faq.md) - Frequently asked questions
 - [Troubleshooting](docs/troubleshooting.md) - Solutions to common issues
 
@@ -74,3 +90,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Developed by **AISpidercore**  
 Website: [www.aispidercore.com](https://www.aispidercore.com)
+
+## Support
+
+If you encounter issues or have questions:
+- 📖 Check the [Troubleshooting Guide](docs/troubleshooting.md)
+- ❓ See the [FAQ](docs/faq.md)
+- 🐛 Report bugs on [GitHub Issues](https://github.com/AISpidercore/linux-highlight-and-speak/issues)
+- 💬 Visit our [Website](https://www.aispidercore.com)
